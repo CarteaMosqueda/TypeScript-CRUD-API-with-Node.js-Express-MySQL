@@ -4,8 +4,10 @@ const app = express();
 
 app.use(express.json());
 
+
+
 app.get("/", (req: Request, res: Response) => {
-  res.send("API is working");
+ res.status(201).json({ message: "User Created" });
 });
 
 const PORT = 4000;
